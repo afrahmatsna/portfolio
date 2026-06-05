@@ -1,0 +1,84 @@
+/* ============================================================
+   responsive.css — Afrah Matsna Portfolio
+   ============================================================ */
+
+/* ── TABLET ≤ 900px ─────────────────────────────────────── */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .about-photo {
+    display:         flex;
+    justify-content: center;
+  }
+
+  .photo-frame { max-width: 280px; width: 100%; }
+
+  .cards-grid { grid-template-columns: 1fr; }
+
+  .cert-tag { display: none; }
+}
+
+/* ── MOBILE ≤ 768px ─────────────────────────────────────── */
+@media (max-width: 640px) {
+  .hero-canvas-wrap { display: none; }
+  /* Nav */
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+
+  /* Hero — single column, canvas hidden */
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 80px;
+    min-height: 100svh;
+    gap: 0;
+  }
+  .hero-inner { max-width: 100%; }
+
+  /* Section spacing */
+  .section { padding: 80px var(--px); }
+
+  /* Contact */
+  .contact { padding-top: 60px; }
+
+  .contact-body { font-size: 15px; }
+
+  /* Footer */
+  footer { padding: 32px var(--px); }
+}
+
+/* ── SMALL ≤ 480px ──────────────────────────────────────── */
+@media (max-width: 480px) {
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+
+  .section { padding: 64px var(--px); }
+
+  .section-title { margin-bottom: 40px; }
+
+  .cards-grid { gap: 14px; }
+
+  .card { padding: 22px 20px; }
+
+  .skill-list { gap: 8px; }
+
+  .photo-frame { max-width: 220px; }
+
+  /* Certs stack on tiny screens */
+  .cert-card {
+    flex-direction: column;
+    align-items:    flex-start;
+    gap:            14px;
+  }
+
+  .cert-right { width: 100%; justify-content: space-between; }
+
+  .cert-name { white-space: normal; font-size: 15px; }
+}
+
+/* ── REDUCED MOTION ─────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
